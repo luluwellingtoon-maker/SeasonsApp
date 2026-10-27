@@ -22,3 +22,13 @@ def card():
     randomRank = random.choice(ranks)
     randomSuit = random.choice(suits)
     return render_template("card.html", rank=randomRank, suit=randomSuit)
+
+@app.route('/about')
+def about():
+    pageData = "Welcome to the About page!" 
+    return render_template("about.html", pageData=pageData)
+
+@app.route('/contact')
+def contact():
+    pageData = "Welcome to the Contact page!"
+    return render_template("contact.html", pageData=pageData)
